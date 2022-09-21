@@ -1,2 +1,2 @@
 # css-menu
-a manu animated entirely with css
+a menu animated entirely with css
