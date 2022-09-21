@@ -1,2 +1,2 @@
 # css-menu
-a menu animated entirely with css
+animations made entirely with css
