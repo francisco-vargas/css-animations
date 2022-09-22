@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Animations</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&display=swap');
+    .sky {
+        background-color: deepskyblue;
+        overflow: hidden;
+        width: 180px;
+        height: 150px;
+        margin-bottom: 10px;
+        background-image: url('cloud.png');
+        background-size: 620px;
+    }
+    .pig {
+        margin-top: 20px;
+        width: 130px;
+        position: relative;
+        z-index: 2;
+    }
+    .mask {
+        position: relative;
+        top: -55px;
+        left: 30px;
+        width: 0px;
+        overflow: hidden;
+    }
+    .mask div{
+        width: 680px;
+        padding: 4px 8px;
+    }
+    .mask h2 {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        color:rgb(233, 223, 44);
+        text-shadow: 1.5px 1.5px rgb(0, 0, 0);
+    }
+    .animate {
+        animation-name: expand-bg;
+        animation-duration: 2s;
+
+        /* Preserve the effect of the animation at ending */
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+    .animate2 {
+        animation-name: fly-right;
+        animation-duration: 1.5s;
+        animation-delay: .25s;
+        
+        /* Preserve the effect of the animation at ending */
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        
+    }
+    .animate2-back {
+        animation-name: fly-right;
+        animation-duration: 1.5s;
+        animation-delay: .25s;
+        
+        /* Preserve the effect of the animation at ending */
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-direction: reverse;
+    }
+    .animate3 {
+        animation-name: expand-title;
+        animation-duration: 1.4s;
+        animation-delay: .25s;
+
+        /* Preserve the effect of the animation at ending */
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes expand-bg {
+
+        from {
+            width: 180px;
+        }
+
+        to {
+            width: 900px;
+        }
+    }
+
+    @keyframes fly-right {
+        0% {left: 0;}
+        100% {
+            left: 750px;
+        }
+        100% {
+            transform: rotateY(180deg);
+        }
+    }
+
+    @keyframes expand-title {
+        from {
+            width: 0px;
+        }
+
+        to {
+            width: 680px;
+        }
+    }
+ 
+  </style>
+
+  <script>
+
+    function DoAnimation() {
+        var containerElement = document.querySelector(".sky");
+        var titleElement = document.querySelector(".pig");
+        var text = document.querySelector(".mask");
+
+        containerElement.classList.toggle("animate");
+        titleElement.classList.toggle("animate2");
+        text.classList.toggle("animate3");
+    }
+
+  </script>
+</head>
+<body>
+  <h1>CSS Animations</h1>
+  <div class="container">
+    <div class="sky">
+        <img class="pig" src="flying-pig.png" alt="">
+        <div class="mask">
+            <div> <h2>With keyframes you can make controlled CSS animations.</h2></div>
+        </div>
+    </div>
+  </div>
+  <button onclick="DoAnimation();">Go</button>
+</body>
+</html>
