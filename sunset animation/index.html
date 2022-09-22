@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="left">
+
+        <div id="sky" class="target">
+    
+          <div id="cloud" class="target">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+          </div>
+    
+          <div id="sun" class="target"></div>
+    
+          <div id="moon" class="target">
+            <div class="moon">
+            </div>
+            <div class="moon moon-2">
+            </div>
+          </div>
+    
+          <div id="ground" class="target"></div>
+    
+        </div><!-- #sky -->
+    
+        <input type="button" value="ANIMATE THE SCENE" id="startbutton">
+        
+        <p><strong>Use the button above to start and reset the animation.</strong></p>
+    
+      </div><!-- #left -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+<script>
+$(function () {
+  var s = null,
+
+  AnimationSpace = {
+    settings: {
+      startButton: $("#startbutton")
+    },
+
+    init: function () {
+      this.startAnimation();
+    },
+    
+    startAnimation: function () {
+      s = this.settings;
+      
+      s.startButton.click(function() {
+        $("div.target").toggleClass("animate");
+        if (s.startButton.attr("value") === "ANIMATE THE SCENE") {
+          s.startButton.attr("value", "RESET THE ANIMATION");
+        } else {
+          s.startButton.attr("value", "ANIMATE THE SCENE"); 
+        }
+      });
+    }
+
+  };
+
+  AnimationSpace.init();
+});
+</script>
+      </script>
+</body>
+</html>
