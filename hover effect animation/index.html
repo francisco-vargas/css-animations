@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () { document.body.className = ""; } // Once page loads, we need to get rid of 'preload' class in order for the transitions to execute
+        var touch = document.getElementsByTagName('div')[0];
+        touch.onclick = function() {
+            // Trigger the `hover` event on the paragraph
+            touch.onhover.call(touch);
+        };
+    </script>
+</head>
+<body class="preload">
+
+<div class="card">
+    <div class="circle"></div>
+    <div class="content">
+        <h2>Coca Cola</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorem voluptate asperiores labore nesciunt numquam? Culpa optio ab, voluptate eos.</p>
+        <a href="#">Buy Now</a>
+    </div>
+    <img src="can.png" alt="can of cola">
+
+</div>
+<div class="footnote">
+<img src="cell-phone.jpg" alt="cell phone">
+ <p>This animation is responsive, try reducing browsing window. You should click/tap outside to exit animation on touch devices.</p>
+</div>
+
+
+
+    
+</body>
+</html>
