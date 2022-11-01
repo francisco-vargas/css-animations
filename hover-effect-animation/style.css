@@ -19,13 +19,14 @@ body {
   -o-transition: none !important;
 }
 .card {
+    margin-top: 80px;
     position: relative;
     width: 600px;
     height: 350px;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    transition: 0.5s; */
+    transition: 0.5s;
 }
 .card .circle {
     position: absolute;
@@ -46,7 +47,7 @@ body {
     background: #d83133;
     clip-path: circle(120px at center);
     transition: 0.5s;
-    transition-delay: 0.5s; 
+    transition-delay: 0.5s;
 }
 .card:hover .circle:before {
     background: #0065c3;
@@ -61,7 +62,7 @@ body {
     height: 300px;
     pointer-events: none;
     transition: 0.5s;
-    transition-delay: 0.5s; 
+    transition-delay: 0.5s;
 }
 .card:hover img {
     left: 72%;
@@ -74,7 +75,7 @@ body {
     left: 20%;
     padding: 20px 20px 20px 40px;
     transition: 0.5s;
-    transition-delay: 0.5s; 
+    transition-delay: 0.5s;
     opacity: 0;
     visibility: hidden;
 }
@@ -147,5 +148,5 @@ body {
     .card .content {
         padding: 20px;
     }
-    
+
 }
