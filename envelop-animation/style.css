@@ -1,10 +1,12 @@
+body {
+	background: lightgray;
+}
 
 .container{
 	position: relative;
-	top: 20px;
+	top: 80px;
     width: 300px;
     height: 300px;
-    background: #9da3b3;
     margin: 0 auto;
 }
 
@@ -28,7 +30,7 @@
 	-moz-transition: .4s;
 	transition: .4s;
 }
-	
+
 	.body {
 		position: absolute;
 		bottom: 0;
@@ -39,7 +41,7 @@
 		border-color: transparent transparent #e95f55 transparent;
 		z-index: 2;
 	}
-	
+
 	.top-fold {
 		position: absolute;
 		top: 50px;
@@ -56,7 +58,7 @@
 		border-color: #cf4a43 transparent transparent transparent;
 		z-index: 2;
 	}
-	
+
 	.back-fold {
 		position: absolute;
 		bottom: 0;
@@ -65,7 +67,7 @@
 		background: #cf4a43;
 		z-index: 0;
 	}
-	
+
 	.left-fold {
 		position: absolute;
 		bottom: 0;
@@ -76,7 +78,7 @@
 		border-color: transparent transparent transparent #e15349;
 		z-index: 2;
 	}
-	
+
 	.letter {
 		left: 20px;
 		bottom: 0px;
@@ -90,7 +92,7 @@
 		-moz-transition: .4s .2s;
 		transition: .4s .2s;
     }
-		
+
 		.letter-border {
 			height: 10px;
 			width: 100%;
@@ -101,7 +103,7 @@
             transparent 8px,
             transparent 18px);
 		}
-		
+
 		.letter-title {
 			margin-top: 10px;
 			margin-left: 5px;
@@ -116,7 +118,7 @@
 			width: 20%;
 			background: #cb5a5e;
 		}
-		
+
 		.letter-stamp {
 			margin-top: 30px;
 			margin-left: 120px;
@@ -139,7 +141,7 @@
 	-webkit-transform: translateX(-50%);
 	-moz-transition: .4s;
 	-moz-transform: translateX(-50%);
-	
+
 	border-radius: 100%;
 	background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
 }
@@ -148,7 +150,7 @@
 			-webkit-transform: translateY(50px);
 			-moz-transform: translateY(50px);
 		}
-		
+
         .container:hover .animated-mail .top-fold {
 			transition: transform .4s, z-index .2s;
 			transform: rotateX(180deg);
